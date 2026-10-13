@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soy una entrada</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <main>
+        <h1>Soy una entrada</h1>
+        <p class="intro fondo-azul parrafo-interactivo">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+
+        <hr>
+
+        <form id="registro" action="home.html" method="post">
+            <div class="field">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <div class="field">
+                <label for="usuario">Ingrese su nombre</label>
+                <input type="text" id="usuario" name="usuario" minlength="5" maxlength="15" required>
+            </div>
+            <div class="field">
+                <label for="apellido">Ingrese su apellido</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div class="field">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]+" inputmode="numeric" title="Escribe solo números del 0 al 9" required>
+            </div>
+            <div class="field">
+                <label for="id-usuario">ID de usuario</label>
+                <input type="text" id="id-usuario" name="id-usuario" value="USR-001" disabled>
+            </div>
+
+            <fieldset>
+                <legend>Género:</legend>
+                <span class="choices">
+                    <label for="mujer">Mujer <input type="radio" id="mujer" name="genero" value="mujer" required></label>
+                    <label for="hombre">Hombre <input type="radio" id="hombre" name="genero" value="hombre"></label>
+                </span>
+            </fieldset>
+            <fieldset>
+                <legend>Preferencias:</legend>
+                <span class="choices">
+                    <label for="pizza">Pizza <input type="checkbox" id="pizza" name="preferencias" value="pizza"></label>
+                    <label for="pozole">Pozole <input type="checkbox" id="pozole" name="preferencias" value="pozole"></label>
+                </span>
+            </fieldset>
+
+            <button type="submit">Guardar y entrar</button>
+        </form>
+    </main>
+    <script>
+        document.getElementById("registro").addEventListener("submit", function (event) {
+            event.preventDefault();
+            window.location.href = "home.html";
+        });
+    </script>
+</body>
+</html>
