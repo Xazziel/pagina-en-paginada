@@ -96,6 +96,8 @@ button {
 
 .parrafo-interactivo {
     transition: color 160ms ease, transform 160ms ease;
+    position: sticky;
+    top: 50px;
 }
 
 .parrafo-interactivo:hover {
@@ -120,6 +122,14 @@ ol li:last-child {
 .home-page {
     background-color: rgb(64, 24, 101);
     color: aliceblue;
+}
+
+#contenido {
+    padding: 16px;
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 @media (max-width: 560px) {
